@@ -246,7 +246,10 @@ services:
       - "6021:6060/tcp"
     volumes:
       - ./privatedb/state:/app/state
+      - ./config_private_tangle.json:/app/config_private_tangle.json:ro
     command:
+      - "-c"
+      - "config_private_tangle.json"
       - "--inx.address=172.18.211.11:9029"
       - "--coordinator.stateFilePath=state/coordinator.state"
       - "--coordinator.blockBackups.enabled=false"
