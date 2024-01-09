@@ -53,5 +53,8 @@
       "enabled": true
     },
     "debugRequestLoggerEnabled": false
+  },
+  "coordinator": {
+     "interval": "1s"
   }
 }
